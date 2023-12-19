@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="1000.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bd_project.ProfilFormateurController">
+   <children>
+      <TextField fx:id="nom" layoutX="387.0" layoutY="135.0" prefHeight="39.0" prefWidth="200.0" promptText="Nom" />
+      <TextField fx:id="prenom" layoutX="619.0" layoutY="137.0" prefHeight="39.0" prefWidth="200.0" promptText="Prénom" />
+      <PasswordField fx:id="password" layoutX="391.0" layoutY="304.0" prefHeight="39.0" prefWidth="200.0" promptText="Mot de passe" />
+      <TextField fx:id="login" layoutX="619.0" layoutY="215.0" prefHeight="39.0" prefWidth="200.0" promptText="Nom d'utilisateur" />
+      <TextField fx:id="mail" layoutX="390.0" layoutY="213.0" prefHeight="39.0" prefWidth="200.0" promptText="E-mail" />
+      <TextField fx:id="num_tel" layoutX="634.0" layoutY="304.0" prefHeight="39.0" prefWidth="200.0" promptText="Numéro tel" />
+      <ComboBox fx:id="domaine" layoutX="392.0" layoutY="387.0" prefWidth="150.0" />
+      <Button layoutX="456.0" layoutY="449.0" mnemonicParsing="false" onAction="#modifierButton" text="Modifier Compte" />
+      <Button fx:id="delete" layoutX="620.0" layoutY="449.0" mnemonicParsing="false" onAction="#detete" text="Supprimer compte" />
+      <AnchorPane fx:id="sidebar" layoutY="-1.0" prefHeight="600.0" prefWidth="297.0" style="-fx-background-color: #000099;">
+         <children>
+            <ImageView fx:id="logo" fitHeight="152.0" fitWidth="181.0" layoutX="54.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@preview.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="logout1" layoutY="559.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="298.0" styleClass="button2" text="Déconnexion" />
+            <Button fx:id="MesFormation" layoutY="258.0" mnemonicParsing="false" onAction="#ListButton" prefHeight="40.0" prefWidth="297.0" styleClass="button2" text="Mes formations" />
+            <Button fx:id="profil" layoutY="298.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="297.0" styleClass="button2" text="Profil" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="353.0" layoutY="41.0" prefHeight="51.0" prefWidth="398.0" style="-fx-font-size: 30;" text="Modifier Compte" />
+      <Label layoutX="392.0" layoutY="119.0" text="Nom" />
+      <Label layoutX="620.0" layoutY="123.0" text="Prénom" />
+      <Label layoutX="393.0" layoutY="200.0" text="E-mail" />
+      <Label layoutX="628.0" layoutY="202.0" text="Nom d'utilisateur" />
+      <Label layoutX="390.0" layoutY="286.0" text="Mot de passe " />
+      <Label layoutX="637.0" layoutY="286.0" text="Numéro de téléphone" />
+      <Label layoutX="398.0" layoutY="362.0" text="Domaine" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="500.0" prefWidth="800.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bd_project.signup_participantController">
+   <children>
+      <Button fx:id="signup" layoutX="484.0" layoutY="413.0" mnemonicParsing="false" onAction="#ValidateSignup" text="Créer compte" />
+      <TextField fx:id="nom" layoutX="340.0" layoutY="127.0" prefHeight="39.0" prefWidth="200.0" promptText="Nom" />
+      <TextField fx:id="prenom" layoutX="573.0" layoutY="127.0" prefHeight="39.0" prefWidth="200.0" promptText="Prénom" />
+      <PasswordField fx:id="password" layoutX="332.0" layoutY="325.0" prefHeight="39.0" prefWidth="200.0" promptText="Mot de passe" />
+      <TextField fx:id="login" layoutX="332.0" layoutY="233.0" prefHeight="39.0" prefWidth="200.0" promptText="Nom d'utilisateur" />
+      <DatePicker fx:id="DateN" layoutX="580.0" layoutY="244.0" prefHeight="27.0" prefWidth="161.0" />
+      <ComboBox fx:id="profil" layoutX="585.0" layoutY="351.0" prefWidth="150.0" />
+      <AnchorPane fx:id="sidebar" prefHeight="540.0" prefWidth="297.0" style="-fx-background-color: #000099;">
+         <children>
+            <ImageView fx:id="logo" fitHeight="152.0" fitWidth="181.0" layoutX="54.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@preview.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="1.0" layoutY="269.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="297.0" styleClass="button2" text="Participant" />
+            <Button fx:id="formateurButton" layoutX="1.0" layoutY="308.0" mnemonicParsing="false" onAction="#signUp_ButtonFormateur" prefHeight="39.0" prefWidth="297.0" styleClass="button2" text="Formateur" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="347.0" layoutY="112.0" text="Nom" />
+      <Label layoutX="573.0" layoutY="112.0" text="Prénom" />
+      <Label layoutX="337.0" layoutY="212.0" text="Nom d'utilisateur" />
+      <Label layoutX="340.0" layoutY="308.0" text="Mot de passe" />
+      <Label layoutX="585.0" layoutY="212.0" text="Date de naissance" />
+      <Label layoutX="585.0" layoutY="317.0" text="Profil" />
+      <Label layoutX="331.0" layoutY="33.0" prefHeight="51.0" prefWidth="398.0" style="-fx-font-size: 30;" text="Inscription Participant" />
+      <Label fx:id="error_msg" layoutX="333.0" layoutY="280.0" styleClass="error" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="500.0" prefWidth="800.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bd_project.Signup_formateurController">
+   <children>
+      <TextField fx:id="nom" layoutX="340.0" layoutY="127.0" prefHeight="39.0" prefWidth="200.0" promptText="Nom" />
+      <TextField fx:id="prenom" layoutX="573.0" layoutY="127.0" prefHeight="39.0" prefWidth="200.0" promptText="Prénom" />
+      <PasswordField fx:id="password" layoutX="573.0" layoutY="319.0" prefHeight="39.0" prefWidth="200.0" promptText="Mot de passe" />
+      <TextField fx:id="login" layoutX="340.0" layoutY="319.0" prefHeight="39.0" prefWidth="200.0" promptText="Nom d'utilisateur" />
+      <TextField fx:id="mail" layoutX="340.0" layoutY="223.0" onKeyReleased="#Email_Control" prefHeight="39.0" prefWidth="200.0" promptText="E-mail" />
+      <Button fx:id="button" layoutX="477.0" layoutY="456.0" mnemonicParsing="false" onAction="#ValidateSignup" text="Créer compte" />
+      <TextField fx:id="num_tel" layoutX="573.0" layoutY="223.0" onKeyReleased="#NumTel_Control" prefHeight="39.0" prefWidth="200.0" promptText="Numéro téléphone" />
+      <ComboBox fx:id="domaine" layoutX="341.0" layoutY="409.0" prefWidth="150.0" />
+      <Label fx:id="NumTel_msg" layoutX="247.0" layoutY="258.0" prefHeight="26.0" prefWidth="75.0" />
+      <Label fx:id="Email_msg" layoutX="322.0" layoutY="156.0" prefHeight="8.0" prefWidth="28.0" />
+      <AnchorPane fx:id="sidebar" prefHeight="540.0" prefWidth="297.0" style="-fx-background-color: #000099;">
+         <children>
+            <ImageView fx:id="logo" fitHeight="152.0" fitWidth="181.0" layoutX="54.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@preview.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="1.0" layoutY="269.0" mnemonicParsing="false" onAction="#signUp_ButtonParticipant" prefHeight="39.0" prefWidth="297.0" styleClass="button2" text="Participant" />
+            <Button fx:id="formateurButton" layoutX="1.0" layoutY="308.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="297.0" styleClass="button2" text="Formateur" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="341.0" layoutY="43.0" prefHeight="51.0" prefWidth="398.0" style="-fx-font-size: 30;" text="Inscription Formateur" />
+      <Label layoutX="341.0" layoutY="118.0" text="Nom" />
+      <Label layoutX="573.0" layoutY="110.0" text="Prénom" />
+      <Label layoutX="349.0" layoutY="206.0" text="E-mail" />
+      <Label layoutX="579.0" layoutY="215.0" prefHeight="18.0" prefWidth="137.0" text="Numéro téléphone" />
+      <Label layoutX="573.0" layoutY="306.0" text="Mot de passe" />
+      <Label layoutX="339.0" layoutY="306.0" text="Nom d'utilisateur" />
+      <Label layoutX="338.0" layoutY="383.0" text="Domaine" />
+      <Label fx:id="Email_msg" layoutX="338.0" layoutY="267.0" prefHeight="18.0" prefWidth="106.0" styleClass="error" textFill="#ef1616" />
+      <Label fx:id="NumTel_msg" layoutX="579.0" layoutY="270.0" styleClass="error" />
+      <Label fx:id="error_msg" layoutX="336.0" layoutY="358.0" styleClass="error" />
+   </children>
+</AnchorPane>

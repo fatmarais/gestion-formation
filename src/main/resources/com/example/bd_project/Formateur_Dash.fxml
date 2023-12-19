@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root" prefHeight="600.0" prefWidth="1000.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bd_project.FormateurDashController">
+    <children>
+        <TableView fx:id="table" layoutX="312.0" layoutY="136.0" prefHeight="346.0" prefWidth="635.0" stylesheets="@View.css">
+            <columns>
+                <TableColumn fx:id="col_intitule" prefWidth="68.800048828125" text="Intitulé" />
+                <TableColumn fx:id="col_jours" prefWidth="117.5999755859375" text="Nombre de jours" />
+                <TableColumn fx:id="col_anne" prefWidth="55.99993896484375" text="Année" />
+                <TableColumn fx:id="col_mois" prefWidth="41.60003662109375" text="Mois" />
+                <TableColumn fx:id="col_nb_Participants" prefWidth="175.99993896484375" text="Nombre de participants" />
+                <TableColumn fx:id="col_domaine" prefWidth="79.2000732421875" text="Domaine" />
+                <TableColumn fx:id="col_formateur" prefWidth="84.7999267578125" text="Formateur" />
+                <TableColumn fx:id="id" maxWidth="26.4000244140625" minWidth="0.0" prefWidth="0.0" />
+            </columns>
+        </TableView>
+      <AnchorPane fx:id="sidebar" layoutY="-3.0" prefHeight="604.0" prefWidth="264.0" style="-fx-background-color: #000099;">
+         <children>
+            <ImageView fx:id="logo" fitHeight="152.0" fitWidth="181.0" layoutX="54.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@preview.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="logout1" layoutY="545.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="298.0" styleClass="button2" text="Déconnexion" />
+                <Button fx:id="MesFormation" layoutY="253.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="298.0" styleClass="button2" text="Mes formations" />
+                <Button fx:id="profil" layoutY="297.0" mnemonicParsing="false" onAction="#profilButton" prefHeight="45.0" prefWidth="298.0" styleClass="button2" text="Profil" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="327.0" layoutY="48.0" prefHeight="51.0" prefWidth="398.0" style="-fx-font-size: 30;" text="Mes formations " />
+    </children>
+
+</AnchorPane>
